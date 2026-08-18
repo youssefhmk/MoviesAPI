@@ -1,23 +1,34 @@
-import { useState } from 'react'
+import { useState ,useEffect } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './App.css'
-
-const Card = (title)=>{
-  return(
-  <div>
-    <h2>{title.title}</h2>
-  </div>)
+import Search from './components/search.jsx'
+const API_BASE_URL= 'https://api.themoviedb.org/3'
+const API_KEY =import.meta.env.VITE_TMDB_KEY;
+const API_OPTIONS = {
+  method :'GET',Headers :{
+    accept:'application/json',Authorization:`Bearer ${API_KEY}`
+  }
 }
 const App = ()=>{
+  const [searchterm,setsearchterm] = useState("")
+  useEffect(()=>{
+  
+  },[])
   return(
-    <>
-    <h2>functional arrow compoo</h2>
-    <Card title ="star wars" />
-    <Card title ="avatar"/>
-    <Card title ="the lion king"/>
-    </>
+    <main>
+  <div className='pattern'/>
+  <div className='wrapper'>
+    <header>
+      <img src="/public/hero.png" alt="" />
+      <h1>find <span className='text-gradient'>movies</span> you 'll enjoy
+      without the hassle</h1>
+    </header>
+    <Search/>
+
+  </div>
+  </main>
   )
 }
 
