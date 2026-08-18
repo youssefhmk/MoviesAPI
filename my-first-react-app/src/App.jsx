@@ -13,19 +13,17 @@ const API_OPTIONS = {
 }
 const App = ()=>{
   const [searchterm,setsearchterm] = useState("")
-  useEffect(()=>{
-  
-  },[])
   return(
     <main>
   <div className='pattern'/>
   <div className='wrapper'>
     <header>
-      <img src="/public/hero.png" alt="" />
+      <img src="/hero.png" alt="" />
       <h1>find <span className='text-gradient'>movies</span> you 'll enjoy
       without the hassle</h1>
     </header>
-    <Search/>
+    <Search searchterm={searchterm} setsearchterm={setsearchterm} />
+    <h1>{searchterm}</h1>
 
   </div>
   </main>
