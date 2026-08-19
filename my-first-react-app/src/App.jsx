@@ -4,7 +4,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import Search from './components/search.jsx'
-import Spinner from './components/spinner.jsx'
+import Spinner from './components/Spinner.jsx'
 import MovieCard from './components/MovieCard.jsx'
 const API_BASE_URL= 'https://api.themoviedb.org/3'
 const API_KEY =import.meta.env.VITE_TMDB_KEY;
